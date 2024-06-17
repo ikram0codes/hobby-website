@@ -8,11 +8,17 @@
 html,
 body {
     width: 100vw;
-    height: 100%;
+    height: 100vmax;
     background-color: white;
     color: black;
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 header {
@@ -174,6 +180,12 @@ button {
     text-align: center;
 }
 
+#about-me div p a {
+    text-decoration: underline;
+    color: #040E27;
+
+}
+
 footer {
     width: 100%;
     display: flex;
@@ -231,7 +243,7 @@ footer p {
 
 #explore {
     width: 100%;
-    height: 100vh;
+    height: max-content;
     padding: 16px;
     display: flex;
     justify-content: flex-start;
@@ -251,4 +263,101 @@ footer p {
     align-items: center;
     flex-direction: column;
     gap: 20px;
+}
+
+@media screen and (max-width:800px) {
+    .navbar h1 {
+        font-size: 25px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+
+    }
+
+    .cta button {
+        width: 6rem;
+        height: 2.3rem;
+
+    }
+
+    #about-me {
+        width: 100vw;
+        height: 100vh;
+        padding: 16px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .head {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-bottom: 5px solid #040E27;
+    }
+
+    #about-me div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    #about-me div img {
+        width: 350px;
+        height: max-content;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+    }
+
+    #about-me div p {
+        width: 700px;
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        background-color: #040E27;
+    }
+
+    footer p {
+        font-size: 20px;
+        color: white;
+    }
+
+    #hobby {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    #about-me {
+        padding: 8px;
+        height: max-content;
+    }
+
+    #about-me div {
+        flex-direction: column-reverse;
+    }
+
+    #about-me div p {
+        padding: 10px;
+        width: 100%;
+    }
 }
